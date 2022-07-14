@@ -42,7 +42,7 @@ public class UserControllerMVC {
     public String newUserForm(Model model){
         User user = new User();
         model.addAttribute("user", user);
-        return "usersPage";
+        return "newUser";
     }
 
     @PostMapping ("/saveUser")
