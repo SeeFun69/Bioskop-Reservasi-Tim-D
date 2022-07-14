@@ -75,7 +75,7 @@
                 <i class="icon ic-trans"></i>
                 Film
             </a>
-            <a th:href="@{/seats}" class="item-menu">
+            <a th:href="@{/seatsPage}" class="item-menu">
                 <i class="icon ic-msg"></i>
                 Seat
             </a>
@@ -176,14 +176,12 @@
                             <div class="form-group row mt-3">
                                 <label class="col-sm-4 col-form-label">Status Film:</label>
                                 <div class="col-sm-8">
-                                    <input type="number" th:field="*{isPlaying}" class="form-control" maxlength="45"/>
+                                    <select class="form-select" th:name="isPlaying" th:value="${isPlaying}" aria-label="Default select example">
+                                        <option value= 1 >Playing</option>
+                                        <option value= 0 >Coming Soon</option>
+                                    </select>
                                 </div>
                             </div>
-
-                        <br/><br/>
-                        <div>
-                            <tr>Masukkan angka 1 untuk status Film sedang tayang, atau masukkan angka 0 untuk FIlm yang belum tayang</tr>
-                        </div>
                     </div>
                     <div class="text-center mt-3">
                         <button type="submit" th:value="${add} ? 'Create' : 'Update'" class="btn btn-primary m-2">Save</button>
