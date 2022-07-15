@@ -176,7 +176,8 @@
                     <td> [[${seats.seatId}]] </td>
                     <td> [[${seats.seatNumber}]] </td>
                     <td> Teater [[${seats.studioName}]] </td>
-                    <td> [[${seats.isAvailable}]] </td>
+<!--                    <td> [[${seats.isAvailable}]] </td>-->
+                    <td th:text="${seats.isAvailable} ? 'Available' : 'Not Available'"></td>
                 </tr>
             </th:block>
             </tbody>

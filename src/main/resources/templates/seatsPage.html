@@ -200,7 +200,7 @@
             </div>
 
             <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-                <div style="width:300px; float=center;" th:if="${message}" class="alert alert-success text-center">
+                <div th:if="${message}" class="alert alert-success text-center"">
                     [[${message}]]
                 </div>
                 <!--            Start of Table-->
@@ -242,7 +242,7 @@
                         </div>
                         <div class="pagination justify-content-center">
                             <div >
-                                <a  th:href="@{'/page/seats/' + ${currentPage - 1}}">Prev</a><span> &nbsp;</span>
+<!--                                <a  th:href="@{'/page/seats/' + ${currentPage - 1}}">Prev</a><span> &nbsp;</span>-->
                                     <span th:each ="i: ${#numbers.sequence(1, totalPages)}">
                                     <a th:if="${currentPage != i}" th:href="@{'/page/seats/' + ${i}}">[[${i}]]</a>
                                     <span th:unless="${currentPage != i}">[[${i}]]</span> &nbsp; &nbsp;</span>
